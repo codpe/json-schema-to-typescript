@@ -415,7 +415,7 @@ function parseSchema(
         const ast = parse(value, options, key, processed, usedNames)
         const comment = `This interface was referenced by \`${parentSchemaName}\`'s JSON-Schema definition
 via the \`patternProperty\` "${key}".`
-        ast.comment = ast.comment ? `${ast.comment}\n\n${comment}` : comment
+        //ast.comment = ast.comment ? `${ast.comment}\n\n${comment}` : comment
         return {
           ast,
           isPatternProperty: !singlePatternProperty,
@@ -433,7 +433,7 @@ via the \`patternProperty\` "${key}".`
         const ast = parse(value, options, key, processed, usedNames)
         const comment = `This interface was referenced by \`${parentSchemaName}\`'s JSON-Schema
 via the \`definition\` "${key}".`
-        ast.comment = ast.comment ? `${ast.comment}\n\n${comment}` : comment
+        //ast.comment = ast.comment ? `${ast.comment}\n\n${comment}` : comment
         return {
           ast,
           isPatternProperty: false,
